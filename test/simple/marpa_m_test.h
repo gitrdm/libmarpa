@@ -71,7 +71,7 @@ char *marpa_m_error_message (Marpa_Error_Code error_code);
 int marpa_m_test_func(const char* name, ...);
 
 typedef union {
-    void *void_rv;
+    void *ptr_rv;
     int int_rv;
 } API_RV;
 
@@ -89,6 +89,8 @@ void rv_code_report (API_test_data * td,
 		     Marpa_Error_Code err_wanted);
 void rv_hidden_report (API_test_data * td, char *name, int rv_wanted,
 		       Marpa_Error_Code err_wanted);
+void rv_ptr_report (API_test_data * td, char *name,
+		    Marpa_Error_Code err_wanted);
 
 #define API_STD_TEST0(test_data, rv_wanted, err_wanted, method, object) \
 { \
@@ -130,6 +132,12 @@ void rv_hidden_report (API_test_data * td, char *name, int rv_wanted,
 { \
    test_data.rv_seen.int_rv = method(object, arg1, arg2 ); \
    rv_hidden_report(&test_data, #method , rv_wanted, err_wanted); \
+}
+
+#define API_PTR_TEST1(test_data, err_wanted, method, object, arg1 ) \
+{ \
+   test_data.rv_seen.ptr_rv = method(object, arg1 ); \
+   rv_ptr_report(&test_data, #method , err_wanted); \
 }
 
 #endif /* MARPA_M_TEST_H */
