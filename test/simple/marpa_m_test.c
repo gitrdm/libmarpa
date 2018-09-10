@@ -90,9 +90,6 @@ const Marpa_Method_Spec methspec[] = {
   { "marpa_r_expected_symbol_event_set", &marpa_r_expected_symbol_event_set, "%s, %i" },
   { "marpa_r_is_exhausted", &marpa_r_is_exhausted, "" },
 
-  { "marpa_r_alternative", &marpa_r_alternative, "%s, %i, %i" },
-  { "marpa_r_earleme_complete", &marpa_r_earleme_complete, "" },
-
   { "marpa_r_current_earleme", (marpa_m_pointer)&marpa_r_current_earleme, "" },
   { "marpa_r_furthest_earleme", (marpa_m_pointer)&marpa_r_furthest_earleme, "" },
   { "marpa_r_latest_earley_set", &marpa_r_latest_earley_set, "" },
@@ -116,14 +113,6 @@ const Marpa_Method_Spec methspec[] = {
   { "marpa_r_progress_report_finish", &marpa_r_progress_report_finish, "" },
 
   { "marpa_b_new", (marpa_m_pointer)&marpa_b_new, "%i" },
-  { "marpa_b_ambiguity_metric", &marpa_b_ambiguity_metric, "" },
-  { "marpa_b_is_null", &marpa_b_is_null, "" },
-
-  { "marpa_o_ambiguity_metric", &marpa_o_ambiguity_metric, "" },
-  { "marpa_o_is_null", &marpa_o_is_null, "" },
-
-  { "marpa_o_high_rank_only_set", &marpa_o_high_rank_only_set, "%i" },
-  { "marpa_o_high_rank_only", &marpa_o_high_rank_only, "" },
 
   { "marpa_t_next", &marpa_t_next, "" },
   { "marpa_t_parse_count", &marpa_t_parse_count, "" },
