@@ -38,11 +38,6 @@ Marpa_Rule_ID R_invalid = -1, R_no_such = 42;
 
 const Marpa_Method_Spec methspec[] = {
 
-  { "marpa_g_start_symbol", &marpa_g_start_symbol, "" },
-  { "marpa_g_highest_symbol_id", &marpa_g_highest_symbol_id, ""},
-  { "marpa_g_precompute", &marpa_g_precompute, "" },
-  { "marpa_g_highest_rule_id", &marpa_g_highest_rule_id, "" },
-
   { "marpa_g_start_symbol_set", &marpa_g_start_symbol_set, "%s" },
   { "marpa_g_symbol_is_terminal",  &marpa_g_symbol_is_terminal, "%s" },
   { "marpa_g_symbol_is_accessible", &marpa_g_symbol_is_accessible, "%s" },
@@ -56,8 +51,6 @@ const Marpa_Method_Spec methspec[] = {
   { "marpa_g_rule_is_nullable", &marpa_g_rule_is_nullable, "%r" },
   { "marpa_g_rule_is_nulling", &marpa_g_rule_is_nulling, "%r" },
   { "marpa_g_rule_is_loop", &marpa_g_rule_is_loop, "%r" },
-  { "marpa_g_rule_rank", &marpa_g_rule_rank, "%r" },
-  { "marpa_g_rule_null_high", &marpa_g_rule_null_high, "%r" },
   { "marpa_g_rule_is_accessible", &marpa_g_rule_is_accessible, "%r" },
   { "marpa_g_rule_is_nullable", &marpa_g_rule_is_nullable, "%r" },
   { "marpa_g_rule_is_nulling", &marpa_g_rule_is_nulling, "%r" },
@@ -65,11 +58,6 @@ const Marpa_Method_Spec methspec[] = {
   { "marpa_g_rule_is_productive", &marpa_g_rule_is_productive, "%r" },
   { "marpa_g_rule_length", &marpa_g_rule_length, "%r" },
   { "marpa_g_rule_lhs", &marpa_g_rule_lhs, "%r" },
-
-  { "marpa_g_symbol_is_terminal_set", &marpa_g_symbol_is_terminal_set, "%s, %i" },
-  { "marpa_g_rule_rhs", &marpa_g_rule_rhs, "%r, %i" },
-  { "marpa_g_rule_rank_set", &marpa_g_rule_rank_set, "%r, %i" },
-  { "marpa_g_rule_null_high_set", &marpa_g_rule_null_high_set, "%r, %i" },
 
 };
 
